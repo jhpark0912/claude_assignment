@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git ls-remote *)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git config *)",
+      "Bash(echo \"name: $\\(git config user.name\\)\")",
+      "Bash(echo \"email: $\\(git config user.email\\)\")",
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(git commit -q -m ' *)"
+    ]
+  }
+}
