@@ -5,6 +5,7 @@ name: Auto Grade Assignment
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    paths: ['[0-9][0-9].*//**']
   issue_comment:
     types: [created]
 
