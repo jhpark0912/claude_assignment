@@ -5,7 +5,7 @@ name: Auto Grade Assignment
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    paths: ['[0-9][0-9].*//**']
+    paths: ['[0-9][0-9].*/**']
   issue_comment:
     types: [created]
 
@@ -39,7 +39,7 @@ jobs:
       - name: Claude 채점
         uses: anthropics/claude-code-action@v1
         with:
-          # GitHub App 설치 완료 — 인증은 자동 처리됨
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: "/grade"
           claude_args: |
             --model claude-opus-4-6
